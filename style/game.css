@@ -1,0 +1,293 @@
+ *{
+    box-sizing: border-box;
+    margin: 0px;
+}
+header  {
+    width: 100vw;
+    height: 15vh;
+    background: rgb(59,55,134);
+background: radial-gradient(circle, rgba(59,55,134,1) 24%, rgba(250,248,255,1) 100%, rgba(0,212,255,1) 100%);
+    display: flex;
+    justify-content: space-between;
+}
+#name_game {
+    
+    
+    width: 10vw;
+    text-align: center;
+    padding-top: 1%;
+    
+
+}
+.h {
+    color: black;
+    font-family: 'Gloria Hallelujah', cursive;
+
+}
+#sign_up, #log_in, #loog_in, #log_out{
+    padding: 5px;
+    font-weight: 800;
+    cursor: pointer;
+
+
+}
+#sign_up:hover{
+    color: red;
+   
+}
+#log_in:hover{
+    color: red;
+}
+#loog_in:hover{
+    color: red;
+}
+#log_out:hover{
+    color: red;
+}
+#login {
+    background-color: wheat;
+    border: solid 5px black;
+}
+#regis{
+    background-color: wheat;
+    border: solid 5px black;
+   
+}
+
+main {
+    background-image: url(../img/background.jpg);
+    height: 75vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+#nes{
+    cursor: pointer;
+    width: 20%;
+}
+footer {
+    background-color: black;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+main a {
+    text-decoration: none;
+    color: yellow;
+    font-size: 2rem;
+    margin: 2%;
+    width: 15%;
+    
+    
+}
+main a:hover{
+    color: white;
+}
+#log_cont {
+    position: absolute;
+    left: 90%;
+}
+#but {
+    color: black;
+}
+.hid {
+    display: none;
+}
+
+#fb{
+    color:gray;
+    font-size: 2rem;
+}
+#go{
+    color: gray;
+    font-size: 2rem;
+}
+#ig{
+    color: gray;
+    font-size: 2rem;
+}
+
+.soc{
+    padding: 10px;
+    margin-top: 1%;
+}
+.so{
+    margin: 0.5rem;
+}
+.cont{
+    margin: 30px;
+    padding: 5px;
+}
+.cont a{
+    text-decoration: none;
+}
+
+#yt {font-size: 1rem;
+color: black;
+display: none;
+}
+.koc{
+    background-color: wheat;
+    border-radius: 10%;
+    border: solid 2px black;
+    width: 20%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+.cont {
+	text-decoration: none;
+	background-color: white;
+	border: solid 1px black;
+	width: 5%;
+	height: 2%;
+	font-size: 1rem;
+	border-radius: 10%;
+	position: relative;
+	top: 30%;
+	
+	
+}
+@media only screen and (max-width: 600px) {
+    .koc {
+        width: 60%;
+        
+    }
+    .h {
+        font-size: 1rem ;
+        
+    }
+    #name_game {
+        background-color: red;
+    border-radius: 30%;
+        width: 23vw;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        
+ 
+        
+       
+        
+    }
+   #but{
+       background-color: crimson;
+       border-radius: 10%;
+       width: 15vw;
+       height: 10vh;
+       margin-left: 60%;
+       font-size: 0.8rem;
+       
+       
+   }
+   main{
+       background-size: cover;
+       
+   }
+   #log_cont{
+       position: relative;
+       left:8%;
+       width: 50%;
+       overflow: hidden;
+   }
+   main a {
+       font-size: 1rem;
+   }
+   #sign_up:hover{
+    color: white;
+   
+}
+#log_in:hover{
+    color: white;
+}
+#loog_in:hover{
+    color: white;
+}
+#log_out:hover{
+    color: white;
+}
+
+}
+
+/* Small devices  */
+@media only screen and (min-width: 600px) {
+    .h {
+        font-size: 1.5rem;
+    }
+    #name_game {
+        
+        width: 21vw;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        
+ 
+        
+       
+        
+    }
+    #log_cont{
+        position: relative;
+        left:65%;
+        bottom: 25%;
+        width: 30%;
+        overflow: hidden;
+    }
+
+}
+#regis, #login{
+    padding: 10px;
+    
+}
+.form-group{
+    padding: 5px;
+}
+
+/* Medium devices */
+@media only screen and (min-width: 768px) {
+    #log_cont{
+        position: relative;
+        left:70%;
+        bottom: 25%;
+        width: 25%;
+
+}
+}
+
+
+/* Large devices */
+@media only screen and (min-width: 992px){
+    .h {
+        margin-right: 100px;
+    }
+    #log_cont{
+        position: relative;
+        left:75%;
+        bottom: 23%;
+        width: 25%;
+
+}
+.h {
+    padding-left: 50px;
+}
+} 
+
+/* Extra large devices  */
+@media only screen and (min-width: 1200px){
+    #log_cont{
+        position: relative;
+        left:80%;
+        bottom: 25%;
+        width: 20%;
+
+}
+.h {
+    padding-left: 100px;
+}
+.vd{
+    margin-left: 4%;
+}
+}

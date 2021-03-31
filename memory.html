@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Memory Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/memory.css">
+    <link rel="stylesheet" href="../projekat/style/css/all.min.css">
+</head>
+<body>
+
+    
+        <header id="head">
+            <div id="empty"></div>
+        <div id="name_game"><h1 class="h">MEMORY GAME</h1></div>
+        <div id="but">
+            <div id="sign_up" class="vis">SIGN UP</div>
+            <div id="log_in" class="vis">LOGIN</div>
+            <div id="loog_in" class="hid"></div>
+            <div id="log_out" class="hid">SIGN OUT</div>
+        </div>
+        </header>
+        
+
+        <div class="container">
+            <a id="back" href="game.html">&#9754;Go back</a>
+
+        
+
+        <ul class="deck" id="card-deck">
+            <li class="card" type="ig">
+                <i class="fab fa-instagram"></i>
+            </li>
+            <li class="card" type="fb">
+                <i class="fab fa-facebook-square"></i>
+            </li>
+            <li class="card match" type="anchor">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card" type="bolt" >
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card" type="cube">
+                <i class="fa fa-cube"></i>
+            </li>
+            <li class="card match" type="anchor">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card" type="leaf">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card" type="bicycle">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card" type="ig">
+                <i class="fab fa-instagram"></i>
+            </li>
+            <li class="card" type="bomb">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card" type="leaf">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card" type="bomb">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card open show" type="bolt">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card" type="bicycle">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card" type="fb">
+                <i class="fab fa-facebook-square"></i>
+            </li>
+            <li class="card" type="cube">
+                <i class="fa fa-cube"></i>
+            </li>
+        </ul>
+        
+            <div class="score-panel">
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span class="moves">0</span> Move(s)
+
+            <div class="timer">
+            </div>
+
+            <div class="restart" onclick=startGame()>
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </div>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <a class="close" href=# >×</a>
+                <div class="content-1">
+                    You win!
+                </div>
+                <div class="content-2">
+                    <p>Moves made<span id=finalMove> </span>  </p>
+                    <p>in <span id=totalTime> </span> </p>
+                    <p>Rating:  <span id=starRating></span></p>
+                </div>
+                <button id="play-again" onclick="playAgain()">
+                    Restart
+                </button>
+            </div>
+        </div>
+        <div id="log_cont">
+            <form id="login" class='hid' novalidate>
+                <div class='error' id='error'> </div>
+                <div class='form-group'>
+                    <label for="id_log"> Insert username: </label>
+                    <input id="id_log" type="text" name="id_log" maxlength="12" class='form-control'>
+                </div>
+                <div class='form-group'>
+                    <label for="id_pass"> Insert password: </label>
+                    <input id="id_pass" type="password" name="id_pass" maxlength="15" class='form-control'>
+                </div>
+                <div class='form-group text-center'>
+                    <input value="Login" type="submit" class='btn btn-default btn-md' id="potvrdi_log">
+                    <input value="Cancel" type="reset" class='btn btn-default btn-md' id="reset_log">
+                </div>
+            </form>
+            <form id="regis" class='hid' novalidate>
+                <div class='error' id='error1'> </div>
+                <div class='form-group'>
+                    <label for="name_reg"> Your name: </label>
+                    <input id="name_reg" type="text" name="name_reg" maxlength="15" class='form-control'>
+                </div>
+                <div class='form-group'>
+                    <label for="email"> Your e-mail: </label>
+                    <input id="email" type="email" name="email" placeholder="neko@gmail.com" class='form-control'>
+                </div>
+                <div class='form-group'>
+                    <label for="id_reg"> Choose username: </label>
+                    <input id="id_reg" type="text" name="id_reg" maxlength="8" class='form-control'>
+                </div>
+                <div class='form-group'>
+                    <label for="reg_pass"> Your password: </label>
+                    <input id="reg_pass" type="password" name="reg_pass" maxlength="15" class='form-control'>
+                </div>
+                <div class='form-group text-center'>
+                    <input value="Sign up" type="submit" class='btn btn-default btn-md' id="com_reg">
+                    <input value="Cancel" type="reset" class='btn btn-default btn-md' id="reset_reg">
+                </div>
+            </form>
+    </div>
+        
+        </div>
+
+        <footer id="foot">
+            <div class="soc">
+                <a  class="social" href="">
+                    <i id="fb" class="fab fa-facebook-square"></i>
+    
+                </a>
+                <a  class="social" href="">
+                    <i id="go" class="fab fa-google-plus-square"></i>
+                </a>
+                <a class="social"  href="">
+                    <i id="ig" class="fab fa-instagram"></i>
+                </a>
+    
+            </div>
+            <div>
+                <a class="cont" href="cont.html">&#9742;Contact us</a>
+            </div>
+    
+        </footer>
+
+    
+    <script src="../projekat/js/main.js"></script>
+    <script src="js/memory.js"></script>
+</body>
+</html>

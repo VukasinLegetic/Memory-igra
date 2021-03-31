@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../projekat/style/css/all.min.css">
+    <link rel="stylesheet" href="style/game.css">
+</head>
+<body>
+    <!--Header-->
+    <header id="head">
+        <div id="empty"></div>
+        <div id="name_game"><h1 class="h">MEMORY GAME</h1></div>
+        <div id="but">
+            <div id="sign_up" class="vis">SIGN UP</div>
+            <div id="log_in" class="vis">LOGIN</div>
+            <div id="loog_in" class="hid"></div>
+            <div id="log_out" class="hid">SIGN OUT</div>
+        </div>
+
+    </header>
+    <!--Main-->
+    <main>
+        <a href="memory.html">Start playing</a>
+        <a  id="nes">How to play</a>
+
+        <div id="yt"><iframe class="vd" width="200" height="200" src="https://www.youtube.com/embed/t7vHj4pmNZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <div class="koc"><br> As shown in the following video this game is played similarly. <br> You have to click on the cards and find the right pair. Have fun!</div></div>
+        
+    
+    <!--Login and sign up-->
+    <div id="log_cont">
+        <form id="login" class='hid' novalidate>
+            <div class='error' id='error'> </div>
+            <div class='form-group'>
+                <label for="id_log"> Insert username: </label>
+                <input id="id_log" type="text" name="id_log" maxlength="12" class='form-control'>
+            </div>
+            <div class='form-group'>
+                <label for="id_pass"> Insert password: </label>
+                <input id="id_pass" type="password" name="id_pass" maxlength="15" class='form-control'>
+            </div>
+            <div class='form-group text-center'>
+                <input value="Login" type="submit" class='btn btn-default btn-md' id="potvrdi_log">
+                <input value="Cancel" type="reset" class='btn btn-default btn-md' id="reset_log">
+            </div>
+        </form>
+        <form id="regis" class='hid' novalidate>
+            <div class='error' id='error1'> </div>
+            <div class='form-group'>
+                <label for="name_reg"> Your name: </label>
+                <input id="name_reg" type="text" name="name_reg" maxlength="15" class='form-control'>
+            </div>
+            <div class='form-group'>
+                <label for="email"> Your e-mail: </label>
+                <input id="email" type="email" name="email" placeholder="jeffsandler@gmail.com" class='form-control'>
+            </div>
+            <div class='form-group'>
+                <label for="id_reg"> Choose username: </label>
+                <input id="id_reg" type="text" name="id_reg" maxlength="8" class='form-control'>
+            </div>
+            <div class='form-group'>
+                <label for="reg_pass"> Your password: </label>
+                <input id="reg_pass" type="password" name="reg_pass" maxlength="15" class='form-control'>
+            </div>
+            <div class='form-group text-center'>
+                <input value="Sign up" type="submit" class='btn btn-default btn-md' id="com_reg">
+                <input value="Cancel" type="reset" class='btn btn-default btn-md' id="reset_reg">
+            </div>
+        </form>
+    </div>
+    </main>
+ <!--Footer-->
+    <footer>
+        <div class="soc">
+            <a  class="social" href="">
+                <i id="fb" class="fab fa-facebook-square"></i>
+
+            </a>
+            <a  class="social" href="">
+                <i id="go" class="fab fa-google-plus-square"></i>
+            </a>
+            <a class="social"  href="">
+                <i id="ig" class="fab fa-instagram"></i>
+            </a>
+
+        </div>
+        <div>
+            <a class="cont" href="cont.html">&#9742;Contact us</a>
+        </div>
+
+    </footer>
+    <script src="../projekat/js/main.js"></script>
+    <script src="../projekat/js/video.js"></script>
+</body>
+</html>
